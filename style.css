@@ -1,0 +1,94 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container {
+    margin: 2rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 768px;
+}
+
+.card {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.one {
+    background-color: var(--bright-orange);
+}
+
+.two {
+    background-color: var(--dark-cyan);
+}
+
+.three {
+    background-color: var(--very-dark-cyan);
+}
+
+h2 {
+    color: var(--very-light-gray);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+    color: var(--white);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+button {
+    font-family: "Lexend Deca", sans-serif;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--very-light-gray);
+    width: fit-content;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.one button {
+    color: var(--bright-orange);
+}
+
+.two button {
+    color: var(--dark-cyan);
+}
+
+.three button {
+    color: var(--very-dark-cyan);
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+}
